@@ -4,30 +4,42 @@
 #include "stdafx.h"
 #include"iostream"
 using namespace std;
-class Fan
+class CLing{
 private:
 	int year;
 	int month;
 	int day;
 public:
-	CFan();
-	CFan(int year, int momth, int day);
-	void exportCMyDate();
-	int setMyDate();
+	CLing();
+	CLing(int year, int month, int day);
+	void exportCLing();
+	int setLing(int y, int m, int d);
 };
-CFan::CFan() {
+CLing::CLing() {
 	int year = 2019;
 	int month = 1;
 	int day = 1;
 }
-CFan::CFan(int y, int m, int d) {
+CLing::CLing(int y, int m, int d) {
 	year = y;
 	month = m;
 	day = d;
 }
+int CLing::setLing(int y, int m, int d) {
+	year = y;
+	month = m;
+	day = d;
+	return 0;
+}
+void CLing::exportCLing() {
+	cout << year << "Äê" << month << "ÔÂ" << day << "ÈÕ" << endl;
+}
 
 int main()
 {
+	CLing od;
+	od.setLing(2019,4,29);
+		od.exportCLing();
     return 0;
 }
 
